@@ -1,0 +1,275 @@
+/* Resetowanie stylów domyślnych */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ustawienia ogólne strony */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Nagłówek strony */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;  /* Zaokrąglone rogi */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Nawigacja */
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f4a261;
+}
+
+/* Sekcja przepisy */
+#przepisy {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;  /* Umożliwia ułożenie elementów w wierszach */
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#przepisy h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+    width: 100%;
+}
+
+article {
+    background-color: #fff;
+    border-radius: 15px;  /* Zaokrąglone rogi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 45%;  /* Ustawia elementy obok siebie */
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);  /* Animacja podnoszenia po najechaniu */
+}
+
+article h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+article p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+article ul {
+    margin-left: 20px;
+}
+
+article ul li {
+    font-size: 1.1em;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;  /* Zaokrąglone rogi zdjęcia */
+    margin-bottom: 20px;
+}
+
+/* Sekcja porady */
+#porady {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#porady h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    width: 100%;
+}
+
+#porady ul {
+    list-style-type: square;
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+#porady ul li {
+    margin-bottom: 10px;
+}
+
+/* Sekcja kontakt */
+#kontakt {
+    margin-top: 40px;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#kontakt h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;  /* Zaokrąglone rogi */
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #f4a261;
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+form input[type="submit"] {
+    background-color: #f4a261;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;  /* Zaokrąglone rogi */
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e76f51;
+}
+
+/* Stopka */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1em;
+    color: #333;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #przepisy h2,
+    #porady h2,
+    #kontakt h2 {
+        font-size: 2em;
+    }
+
+    article h3 {
+        font-size: 1.8em;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        font-size: 1em;
+    }
+
+    form input[type="submit"] {
+        font-size: 1.1em;
+        padding: 12px 20px;
+    }
+
+    #przepisy {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        width: 90%; /* Dostosowanie szerokości do małych ekranów */
+    }
+
+    #porady {
+        flex-direction: column;
+    }
+}
